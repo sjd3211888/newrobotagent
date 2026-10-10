@@ -1,5 +1,7 @@
 # 机器人 Agent 平台：需求、架构方向与 Eino 选型试用
 
+导入说明（2026-10-10，ITER-001）：本文件为历史研究快照，原始文本可从 Git 基线追溯。未导入的本地附件已改为原工程来源路径；外部资料和版本未在本轮重新核验。原工程根目录为 `D:\voiceagent`。
+
 日期：2026-10-09  
 状态：需求与选型讨论记录；已决定优先试用 Eino，尚未完成原型或生产选型。
 
@@ -26,7 +28,7 @@
 
 当前总体分工是：机器人上有 Gateway，云端负责会话、模型接入、任务处理和编排，设备侧完成实际观测和执行。Gateway 大概率位于 NAT 后，只能主动连接云端。
 
-当前工程的历史说明见 [工程架构详解](architecture-current-2026-09-20.md) 和 [已知边界](known-gaps.md)。这些文档用于理解业务链路，不作为新架构必须沿用的约束；具体部署与现有实现状态需要另行核对。
+当前工程的历史说明见 原工程资料 `docs/development/architecture-current-2026-09-20.md`（工程架构详解） 和 原工程资料 `docs/development/known-gaps.md`（已知边界）。这些文档用于理解业务链路，不作为新架构必须沿用的约束；具体部署与现有实现状态需要另行核对。
 
 ## 3. 已明确的需求
 
@@ -83,9 +85,9 @@ Eino 同时提供 Go 组件接口、Agent Development Kit 和图/工作流编排
 
 ## 5. 目标分层架构
 
-![机器人 Agent 平台：Eino 试用分层架构](diagrams/robot-agent-eino-architecture-2026-10-09.png)
+原工程资料 `docs/development/diagrams/robot-agent-eino-architecture-2026-10-09.png`（机器人 Agent 平台：Eino 试用分层架构）
 
-图中展示目标架构草案，默认重点验证机器人或现场运行 Agent。v2 将 Eino 已提供的上下文、编排、模型与工具接口、恢复和事件机制嵌套在框架范围内，区分框架复用与平台业务适配。图片与下方逻辑图互为补充，不表示所有模块已实现或每个框均需独立部署。可编辑版本见 [SVG 架构图](diagrams/robot-agent-eino-architecture-2026-10-09.svg)；修改 [生成脚本](diagrams/generate_robot_agent_eino.py) 可重新生成 SVG，PNG 为浏览器渲染导出。
+图中展示目标架构草案，默认重点验证机器人或现场运行 Agent。v2 将 Eino 已提供的上下文、编排、模型与工具接口、恢复和事件机制嵌套在框架范围内，区分框架复用与平台业务适配。图片与下方逻辑图互为补充，不表示所有模块已实现或每个框均需独立部署。可编辑版本见 原工程资料 `docs/development/diagrams/robot-agent-eino-architecture-2026-10-09.svg`（SVG 架构图）；修改 原工程资料 `docs/development/diagrams/generate_robot_agent_eino.py`（生成脚本） 可重新生成 SVG，PNG 为浏览器渲染导出。
 
 | 层级 | 职责 | 部署方向 |
 | --- | --- | --- |

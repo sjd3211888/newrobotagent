@@ -1,0 +1,30 @@
+# Machine-local state and generated delivery artifacts
+.local/
+.worktrees/
+build/
+dist/
+
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Language and dependency caches
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.cache/
+coverage.out
+*.test
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Editor and operating-system state
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
